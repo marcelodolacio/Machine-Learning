@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "T-cross",
+        "category": "SUV",
+        "price": 150.000,
+        "color": "prata"
+    },
+    {
+        "id": 2,
+        "name": "Civic",
+        "category": "Sedan",
+        "price": 25.000,
+        "color": "preto"
+    },
+    {
+        "id": 3,
+        "name": "Sandero Rs",
+        "category": "Hatch",
+        "price": 65.000,
+        "color": "branco"
+    },
+    {
+        "id": 4,
+        "name": "106",
+        "category": "Hatch",
+        "price": 30.000,
+        "color": "Azul"
+    },
+    {
+        "id": 5,
+        "name": "Renegade",
+        "category": "SUV",
+        "price": 130.000,
+        "color": "branco"
+    },
+    {
+        "id": 6,
+        "name": "HB20",
+        "category": "Hatch",
+        "price": 55.000,
+        "color": "branco"
+    },
+    {
+        "id": 7,
+        "name": "Elba",
+        "category": "Wagon",
+        "price": 30.000,
+        "color": "Vermelha"
+    },
+    {
+        "id": 8,
+        "name": "Picasso",
+        "category": "Wagon",
+        "price": 20.000,
+        "color": "preto"
+    }
+]
