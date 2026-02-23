@@ -1,6 +1,6 @@
-# E-commerce Recommendation System
+# E-commerce Cars Recommendation System
 
-A web application that displays user profiles and product listings, with the ability to track user purchases for future machine learning recommendations using TensorFlow.js.
+A web application that displays user profiles and cars listings, with the ability to track user purchases for future machine learning recommendations using TensorFlow.js.
 
 ## Project Structure
 
