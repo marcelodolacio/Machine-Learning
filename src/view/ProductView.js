@@ -64,14 +64,14 @@ export class ProductView extends View {
                 const product = JSON.parse(button.dataset.product);
                 const originalText = button.innerHTML;
 
-                button.innerHTML = '<i class="bi bi-check-circle-fill"></i> Added';
+                button.innerHTML = '<i class="bi bi-check2-circle me-1"></i> Adicionado';
                 button.classList.remove('btn-primary');
                 button.classList.add('btn-success');
                 setTimeout(() => {
                     button.innerHTML = originalText;
                     button.classList.remove('btn-success');
                     button.classList.add('btn-primary');
-                }, 500);
+                }, 800);
                 this.#onBuyProduct(product, button);
 
             });

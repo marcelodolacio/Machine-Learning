@@ -51,11 +51,11 @@ export class ModelView extends View {
     }
     updateTrainingProgress(progress) {
         this.#trainModelBtn.disabled = true;
-        this.#trainModelBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Training...';
+        this.#trainModelBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Treinando...';
 
         if (progress.progress === 100) {
             this.#trainModelBtn.disabled = false;
-            this.#trainModelBtn.innerHTML = '<i class="bi bi-cpu"></i> Train Model';
+            this.#trainModelBtn.innerHTML = '<i class="bi bi-cpu me-1"></i> Treinar Modelo';
         }
     }
 
@@ -68,9 +68,9 @@ export class ModelView extends View {
 
             return `
                 <div class="user-purchase-summary">
-                    <h6>${user.name} (Age: ${user.age})</h6>
+                    <h6><i class="bi bi-person me-1 text-primary"></i> ${user.name} <span class="text-muted" style="font-size: 0.8em;">(Idade: ${user.age})</span></h6>
                     <div class="purchases-badges">
-                        ${purchasesHtml || '<span class="text-muted">No purchases</span>'}
+                        ${purchasesHtml || '<span class="text-muted"><i class="bi bi-slash-circle me-1"></i> Nenhum veículo</span>'}
                     </div>
                 </div>
             `;

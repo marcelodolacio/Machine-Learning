@@ -54,5 +54,19 @@
         "category": "Wagon",
         "price": 20.000,
         "color": "preto"
+    },
+    {
+        "id": 9,
+        "name": "Twingo",
+        "category": "Hatch",
+        "price": 18.000,
+        "color": "Cinza"
+    },
+    {
+        "id": 10,
+        "name": "Astra",
+        "category": "Hatch",
+        "price": 20.000,
+        "color": "cinza"
     }
 ]

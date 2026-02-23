@@ -45,7 +45,7 @@ export class UserView extends View {
         debugger
 
         if (!pastPurchases || pastPurchases.length === 0) {
-            this.#pastPurchasesList.innerHTML = '<p>No past purchases found.</p>';
+            this.#pastPurchasesList.innerHTML = '<p class="text-white"><i class="bi bi-info-circle me-1"></i> Nenhum veículo armazenado no histórico.</p>';
             return;
         }
 
@@ -62,7 +62,7 @@ export class UserView extends View {
 
     addPastPurchase(product) {
 
-        if (this.#pastPurchasesList.innerHTML.includes('No past purchases found')) {
+        if (this.#pastPurchasesList.innerHTML.includes('Nenhum veículo armazenado no histórico')) {
             this.#pastPurchasesList.innerHTML = '';
         }
 

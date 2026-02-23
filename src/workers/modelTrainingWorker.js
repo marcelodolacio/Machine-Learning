@@ -5,9 +5,9 @@ let _model = null
 
 const WEIGHTS = {
     category: 0.4,
-    color: 0.3,
-    price: 0.2,
-    age: 0.1,
+    age: 0.4,
+    color: 0.1,
+    price: 0.1
 };
 
 

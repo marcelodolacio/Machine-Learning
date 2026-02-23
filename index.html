@@ -1,75 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Recommendation System</title>
+    <title>Sistema de Recomendação - Planalto Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="main">
-        <h1>E-commerce Recommendation System</h1>
+    <div class="main container-fluid px-4 py-5">
+        <header class="text-center mb-5 header-section">
+            <h1 class="display-4 fw-bold title-gradient">Sistema Inteligente de Recomendação Automotiva</h1>
 
-        <div class="row mt-3">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h4>User Profile</h4>
+        </header>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-5">
+                <div class="card glass-card h-100">
+                    <div class="card-header border-0 bg-transparent pt-4 pb-0">
+                        <h4 class="mb-0 text-white"><i class="bi bi-person-circle text-primary me-2"></i> Perfil do
+                            Usuário</h4>
                     </div>
                     <div class="card-body">
-                        <form id="userForm">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="userSelect" class="form-label">Select User</label>
-                                    <select class="form-select" id="userSelect">
-                                        <option value="">-- Select a user --</option>
+                        <form id="userForm" class="mb-4">
+                            <div class="row g-3">
+                                <div class="col-sm-8">
+                                    <label for="userSelect" class="form-label text-light-alpha">Selecionar
+                                        Cliente</label>
+                                    <select class="form-select custom-select" id="userSelect">
+                                        <option value="">-- Selecione um cliente --</option>
                                     </select>
                                 </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label for="userAge" class="form-label">Age</label>
-                                    <input type="number" class="form-control" id="userAge" disabled>
+                                <div class="col-sm-4">
+                                    <label for="userAge" class="form-label text-light-alpha">Idade</label>
+                                    <input type="number" class="form-control custom-input" id="userAge" disabled>
                                 </div>
                             </div>
                         </form>
 
-                        <div id="pastPurchasesContainer" class="mt-4">
-                            <h5>Past Cars</h5>
-                            <div id="pastPurchasesList" class="row"></div>
+                        <div id="pastPurchasesContainer" class="history-container p-3 rounded-3 mt-auto">
+                            <h5 class="text-white mb-3"><i class="bi bi-clock-history text-primary me-2"></i> Hitórico
+                                de Veículos</h5>
+                            <div id="pastPurchasesList" class="row g-2 custom-scrollbar"
+                                style="max-height: 250px; overflow-y: auto;"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h4>Model Training</h4>
+            <div class="col-lg-7">
+                <div class="card glass-card h-100">
+                    <div class="card-header border-0 bg-transparent pt-4 pb-0">
+                        <h4 class="mb-0 text-white"><i class="bi bi-cpu text-primary me-2"></i> Inteligência Artificial
+                        </h4>
                     </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="model-controls d-flex gap-2">
-                                <button id="trainModelBtn" class="btn btn-primary train-model-btn">
-                                    <i class="bi bi-cpu"></i> Train Model
-                                </button>
-                                <button disabled id="runRecommendationBtn" class="btn btn-success train-model-btn">
-                                    <i class="bi bi-cpu"></i> Run Recommendation
-                                </button>
-                            </div>
+                    <div class="card-body d-flex flex-column">
+
+                        <div class="model-controls p-4 rounded-3 text-center mb-4 control-panel">
+                            <button id="trainModelBtn"
+                                class="btn btn-primary btn-glow px-4 py-2 me-md-2 mb-2 mb-md-0 rounded-pill">
+                                <i class="bi bi-gear-fill me-1"></i> Treinar Modelo
+                            </button>
+                            <button disabled id="runRecommendationBtn"
+                                class="btn btn-success btn-glow px-4 py-2 rounded-pill">
+                                <i class="bi bi-stars me-1"></i> Gerar Recomendações
+                            </button>
                         </div>
 
-
-                        <div class="all-users-purchases">
-                            <h5 id="purchasesDiv" style="cursor: pointer;">
-                                All Users Cars Data
-                                <i id="purchasesArrow" class="bi bi-chevron-down"></i>
+                        <div class="all-users-purchases mt-auto">
+                            <h5 id="purchasesDiv"
+                                class="text-white d-flex justify-content-between align-items-center p-3 rounded-3 data-toggle-btn m-0"
+                                style="cursor: pointer;">
+                                <span><i class="bi bi-database me-2 text-primary"></i> Base de Dados de Clientes</span>
+                                <i id="purchasesArrow" class="bi bi-chevron-down text-primary"></i>
                             </h5>
-                            <div id="allUsersPurchasesList" class="user-purchases-data overflow-auto"
-                                style="max-height: 400px;display: none;">
+                            <div id="allUsersPurchasesList" class="user-purchases-data mt-2 custom-scrollbar"
+                                style="max-height: 250px; display: none;">
                             </div>
                         </div>
                     </div>
@@ -77,11 +89,13 @@
             </div>
         </div>
 
-        <h3 class="">Cars</h3>
-        <div class="row" id="productList">
+        <div class="catalog-section mt-5">
+            <h3 class="text-white border-bottom border-secondary pb-3 mb-4"><i
+                    class="bi bi-car-front-fill text-primary me-2"></i> Veículos Disponíveis</h3>
+            <div class="row g-4" id="productList">
+            </div>
         </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
     <script type="module" src="./src/index.js"></script>
